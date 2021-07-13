@@ -2,7 +2,18 @@ import React, { Component } from 'react'
 
 class Counter extends Component {  
 
+    componentDidUpdate(prevProps, prevState){
+        console.log('PrevProps', prevProps);
+        console.log('PrevState', prevState);
+    };
+
+    componentWillUnmount(){
+        console.log('counter - unmount'); //counter remouved from the dom - perfect timing for cleaning memory
+    };
+
 render() { 
+
+        console.log('counter - rendered');
 
         return (<div>
                     <span className={this.getBadgeClasses()}>{this.formatCount()}</span>

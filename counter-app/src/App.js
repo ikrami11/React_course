@@ -15,6 +15,16 @@ class App extends Component {
     ]
  };
 
+ constructor(){
+   super();
+   console.log('app-constructor'); //perfect place to initialize data
+ };
+
+ componentDidMount(){
+   console.log('app-mounted'); //perfect place to do ajax calls and effect new data - get data from the server
+ };
+
+
 
 handleIncrement = counter => {
     
@@ -45,6 +55,9 @@ handleReset = () => {
 };
 
   render() {
+
+    console.log('app-rendered');
+
     return (
 
       <React.Fragment>
